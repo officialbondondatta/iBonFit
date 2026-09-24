@@ -2,6 +2,7 @@
 
 import { useContext } from "react";
 import { GymContext } from "../GymContext/GymContext";
+import Link from "next/link";
 
 const PlanButton = () => {
     const contextValues = useContext(GymContext)
@@ -10,14 +11,16 @@ const PlanButton = () => {
     }
     const { plan } = contextValues
     return (
-        <button>
-            <span className="font-bold">
-                Plan
-            </span>
-            <span className="ml-2 bg-lime-300 px-2  py-1 text-slate-700 font-semibold rounded-full">
-                {plan.length}
-            </span>
-        </button>
+        <Link href={"/my-plan"}>
+            <button className="cursor-pointer">
+                <span className="font-bold">
+                    Plan
+                </span>
+                <span className="ml-2  bg-lime-300 px-2  py-1 text-slate-700 font-semibold rounded-full">
+                    {plan.length}
+                </span>
+            </button>
+        </Link>
     );
 };
 
