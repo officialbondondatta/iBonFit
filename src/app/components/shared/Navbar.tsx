@@ -17,7 +17,6 @@ const Navbar = () => {
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                             <RxHamburgerMenu className="text-2xl text-lime-300" />
-
                         </div>
                         <ul
                             tabIndex={-1}
@@ -26,7 +25,7 @@ const Navbar = () => {
                         </ul>
                     </div>
                     <div className="flex items-center gap-2">
-                        <Image src={Logo} alt="ibonfit logo" className=""></Image>
+                        <Image src={Logo} alt="ibonfit logo" className="h-6 w-6"></Image>
                         <Link href={"/"} className=" font-bold text-xl">
                             iBonFit
                         </Link>

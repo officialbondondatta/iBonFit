@@ -11,8 +11,10 @@ const PlanButton = () => {
     const { plan } = contextValues
     return (
         <button>
-            Plan
-            <span className="ml-2">
+            <span className="font-bold">
+                Plan
+            </span>
+            <span className="ml-2 bg-lime-300 px-2  py-1 text-slate-700 font-semibold rounded-full">
                 {plan.length}
             </span>
         </button>

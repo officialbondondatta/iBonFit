@@ -11,8 +11,10 @@ const SavedButton = () => {
     const { saved } = contextValues
     return (
         <button>
-            Saved
-            <span className="ml-2">
+            <span className="font-semibold text-slate-300">
+                Saved
+            </span>
+            <span className="ml-2 bg-slate-600 outline-white outline rounded-full px-2 py-1 font-semibold">
                 {saved.length}
             </span>
         </button>
