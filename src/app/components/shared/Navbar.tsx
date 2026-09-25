@@ -17,11 +17,11 @@ const Navbar = () => {
                 <div className="navbar-start">
                     <div className="dropdown">
                         <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
-                            <RxHamburgerMenu className="text-2xl text-lime-300" />
+                            <RxHamburgerMenu className="-ml-5 text-2xl text-lime-300" />
                         </div>
                         <ul
                             tabIndex={-1}
-                            className="menu menu-sm dropdown-content bg-lime-200 z-50 font-semibold text-slate-600 mt-3 -ml-2 w-screen">
+                            className="menu menu-sm dropdown-content bg-lime-200 z-50 font-semibold text-slate-600 mt-3 -ml-5 w-screen">
                             {NavLinks}
                         </ul>
                     </div>
