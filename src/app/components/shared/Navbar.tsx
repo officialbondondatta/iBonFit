@@ -12,7 +12,7 @@ const Navbar = () => {
     const pathName = usePathname()
     const NavLinks = <>
         <ul className="flex gap-2">
-            <li><Link href={"/"} className={`${pathName === "/" ? "bg-lime-400 text-slate-700 font-semibold" : ""}`}>Workouts</Link></li>
+            <li><Link href={"/"} className={`${pathName === "/" ? "bg-lime-400 text-slate-700 font-semibold" : ""}`}>Workout</Link></li>
             <li><Link href={"/my-plan"} className={`${pathName === "/my-plan" ? "bg-lime-400 text-slate-700 font-semibold" : ""}`} >My Plan</Link></li>
         </ul>
     </>
