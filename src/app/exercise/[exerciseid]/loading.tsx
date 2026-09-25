@@ -1,7 +1,7 @@
 const loading = () => {
     return (
-        <div>
-            <h2 className="text-center">Loading...</h2>
+        <div className="container mx-auto flex items-center justify-center">
+            <span className="loading loading-spinner text-primary text-xl text-center"></span>
         </div>
     );
 };
