@@ -1,3 +1,4 @@
+"use client"
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../../assets/logo.png"
@@ -5,11 +6,15 @@ import Logo from "../../../assets/logo.png"
 import { RxHamburgerMenu } from "react-icons/rx";
 import PlanButton from "../Buttons/NavButtons/PlanButton";
 import SavedButton from "../Buttons/NavButtons/SavedButton";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
+    const pathName = usePathname()
     const NavLinks = <>
-        <li><Link href={"/"}>Workouts</Link></li>
-        <li><Link href={"/my-plan"}>My Plan</Link></li>
+        <ul className="flex gap-2">
+            <li><Link href={"/"} className={`${pathName === "/" ? "bg-lime-400 text-slate-700 font-semibold" : ""}`}>Workouts</Link></li>
+            <li><Link href={"/my-plan"} className={`${pathName === "/my-plan" ? "bg-lime-400 text-slate-700 font-semibold" : ""}`} >My Plan</Link></li>
+        </ul>
     </>
     return (
         <nav className="bg-slate-600">
