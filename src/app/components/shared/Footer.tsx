@@ -12,7 +12,7 @@ const Footer = () => {
                     </Link>
                 </div>
                 <div>
-                    <h2 className="text-slate-200 text-sm text-center">© 2026 FitLog — Workout Library. Train hard, log honest.</h2>
+                    <h2 className="text-slate-200 text-sm lg:text-center">© 2026 FitLog — Workout Library. Train hard, log honest.</h2>
                 </div>
             </div>
         </footer>
