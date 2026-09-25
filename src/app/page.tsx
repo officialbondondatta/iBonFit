@@ -3,7 +3,7 @@ import Library from "./components/Library/Library";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full max-w-300 mx-auto px-5">
       <Banner></Banner>
       <Library></Library>
     </div>

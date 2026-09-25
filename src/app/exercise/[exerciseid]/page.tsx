@@ -1,4 +1,7 @@
-const page = async ({ params }) => {
+interface IExerciseProps {
+    params: Promise<{ exerciseid: string }>
+}
+const page = async ({ params }: IExerciseProps) => {
     const { exerciseid } = await params
     console.log(exerciseid)
     return (

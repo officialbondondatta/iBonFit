@@ -15,13 +15,13 @@ const Library = async () => {
     }
     return (
         <section id="library">
-            <div className="container mx-auto mt-10 p-5 lg:p-0">
+            <div className="mt-10 py-5 lg:py-0">
                 <div className="flex flex-col space-y-2">
-                    <h2 className="text-2xl font-semibold">THE LIBRARY</h2>
+                    <h2 className="text-4xl font-semibold">THE LIBRARY</h2>
                     <p>Twelve lifts covering every major muscle group.</p>
                 </div>
                 <div>
-                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mt-5">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 xl:gap-5 lg:gap-8 gap-2 md:gap-5 mt-5">
                         {exerciseData.map(exercise => (
                             <Link key={exercise.id} href={`/exercise/${exercise.id}`}>
                                 <ExerciseCard exercise={exercise}></ExerciseCard>
