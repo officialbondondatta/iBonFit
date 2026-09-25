@@ -29,8 +29,8 @@ const ExerciseCard = ({ exercise }: IExerciseCardProps) => {
                 <hr className="text-slate-600" />
                 <div>
                     <ul className="flex gap-5 items-center mt-2">
-                        <li className="flex items-center gap-2 text-slate-300 font-semibold"><LuClock4 />{exercise.duration}</li>
-                        <li className="flex items-center gap-2 text-slate-300 font-semibold"><VscFlame className="text-slate-200" />{exercise.caloriesBurned}</li>
+                        <li className="flex items-center gap-2 text-slate-300 font-semibold"><LuClock4 />{exercise.duration} min</li>
+                        <li className="flex items-center gap-2 text-slate-300 font-semibold"><VscFlame className="text-slate-200" />{exercise.caloriesBurned} kcal</li>
                         <li className="flex items-center gap-2 text-slate-300 font-semibold"><IoMdFlame />{exercise.rating}</li>
                     </ul>
                 </div>
