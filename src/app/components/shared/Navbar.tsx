@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import Logo from "../../../assets/logo.png"
-import PlanButton from "../NavButtons/PlanButton";
-import SavedButton from "../NavButtons/SavedButton";
+
 import { RxHamburgerMenu } from "react-icons/rx";
+import PlanButton from "../Buttons/NavButtons/PlanButton";
+import SavedButton from "../Buttons/NavButtons/SavedButton";
 
 const Navbar = () => {
     const NavLinks = <>

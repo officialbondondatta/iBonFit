@@ -1,8 +1,8 @@
 "use client"
 
 import { useContext } from "react";
-import { GymContext } from "../GymContext/GymContext";
 import Link from "next/link";
+import { GymContext } from "../../GymContext/GymContext";
 
 const SavedButton = () => {
     const contextValues = useContext(GymContext)

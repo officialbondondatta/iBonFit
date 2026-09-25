@@ -1,8 +1,8 @@
+import AddToTodaysPlanButton from "@/app/components/Buttons/ExcerciseDetailsButtons/AddToTodaysPlanButton";
+import SaveForLaterButton from "@/app/components/Buttons/ExcerciseDetailsButtons/SaveForLaterButton";
 import Table from "@/app/components/Table";
 import { IExercise } from "@/app/types/types";
 import Image from "next/image";
-import { MdOutlineAddCard } from "react-icons/md";
-import { RiBookmarkLine } from "react-icons/ri";
 
 interface IExerciseProps {
     params: Promise<{ exerciseid: string }>
@@ -22,14 +22,14 @@ const page = async ({ params }: IExerciseProps) => {
     }
 
     return (
-        <section className="container mx-auto mt-5 p-5 lg:p-0">
-            <div className="grid lg:grid-cols-2 grid-cols-1 md:grid-cols-2 gap-5">
-                <div className="w-full">
-                    <Image src={exercise.image} alt={`${exercise.name}`} className="w-full rounded-xl" width={600} height={600}></Image>
+        <section className="max-w-300 mx-auto mt-5 p-5 lg:p-0">
+            <div className="grid lg:grid-cols-2 grid-cols-1 lg:gap-20 gap-5">
+                <div className="">
+                    <Image src={exercise.image} alt={`${exercise.name}`} className="w-full lg:max-w-300 lg:h-screen rounded-xl" width={600} height={600}></Image>
                 </div>
                 <div>
                     <div className="space-y-3">
-                        <h2 className="text-4xl font-bold">BARBELL BENCH PRESS</h2>
+                        <h2 className="lg:text-4xl text-3xl font-bold">BARBELL BENCH PRESS</h2>
                         <p className="text-slate-300">A compound press that builds chest thickness, triceps, and pressing power
                             from a stable bench.</p>
                         <ul className="flex gap-5">
@@ -51,20 +51,9 @@ const page = async ({ params }: IExerciseProps) => {
                             ))}
                         </ol>
                     </div>
-                    <div className="mt-4 flex gap-5">
-                        <button className="flex  items-center gap-2 bg-lime-300 text-slate-800 font-semibold px-4 py-2 rounded-xl">
-                            <MdOutlineAddCard className="text-xl" />
-                            <span>
-                                Add to today&apos;s plan
-                            </span>
-                        </button>
-                        <button className="flex  items-center gap-2 border border-white text-white font-semibold px-4 py-2 rounded-xl">
-                            <RiBookmarkLine className="text-xl" />
-                            <span>
-                                Save for later
-                            </span>
-                        </button>
-
+                    <div className="mt-4 flex flex-col items-center lg:justify-start  justify-center lg:flex-row gap-5">
+                        <AddToTodaysPlanButton excercise={exercise}></AddToTodaysPlanButton>
+                        <SaveForLaterButton excercise={exercise}></SaveForLaterButton>
                     </div>
                 </div>
             </div>
