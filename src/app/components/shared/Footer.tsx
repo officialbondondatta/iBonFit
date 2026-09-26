@@ -3,7 +3,7 @@ import Link from "next/link";
 import Logo from "@/assets/logo.png"
 const Footer = () => {
     return (
-        <footer className="bg-slate-700 p-5 mt-15">
+        <footer className="bg-slate-800 p-5 mt-15">
             <div className="max-w-300 mx-auto flex items-center space-y-3 lg:flex-row flex-col justify-center lg:justify-between">
                 <div className="flex items-center gap-1">
                     <Image src={Logo} alt="ibonfit logo" className="h-5 w-5"></Image>
