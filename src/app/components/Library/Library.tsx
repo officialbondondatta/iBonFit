@@ -5,8 +5,9 @@ import SectionHeader from "../shared/SectionHeader";
 
 const Library = async () => {
     let exerciseData: IExercise[] = []
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL
     try {
-        const res = await fetch("https://api.abcz.workers.dev/api/fitlog")
+        const res = await fetch(`${apiUrl}`)
         if (!res.ok) {
             throw new Error("Found error while fetching data")
         }
