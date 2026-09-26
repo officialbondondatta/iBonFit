@@ -23,7 +23,7 @@ const GymProvider = ({ children }: IGymProviderProps) => {
         defaultValue: [],
     });
 
-    const contextValues = {
+    const contextValues: IContextValues = {
         plan,
         setPlan,
         saved,
