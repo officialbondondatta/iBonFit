@@ -11,7 +11,7 @@ const page = async ({ params }: IExerciseProps) => {
     let exercise: IExercise;
     const { exerciseid } = await params
     try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/${exerciseid}`)
+        const res = await fetch(`https://api.abcz.workers.dev/api/fitlog/${exerciseid}`)
         if (!res.ok) {
             throw new Error("Data Fetching Error")
         }
