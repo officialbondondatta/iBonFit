@@ -1,6 +1,6 @@
 "use client"
 import { IExercise } from "@/app/types/types";
-import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
+import { createContext, Dispatch, ReactNode, SetStateAction } from "react";
 import useLocalStorageState from "use-local-storage-state";
 
 interface IContextValues {
