@@ -17,7 +17,7 @@ const Navbar = () => {
         </ul>
     </>
     return (
-        <nav className="bg-slate-600">
+        <nav className="bg-slate-800">
             <div className="w-full max-w-300 mx-auto navbar px-5">
                 <div className="navbar-start">
                     <div className="dropdown">
