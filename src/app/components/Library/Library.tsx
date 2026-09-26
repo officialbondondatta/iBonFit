@@ -5,13 +5,8 @@ import SectionHeader from "../shared/SectionHeader";
 
 const Library = async () => {
     let exerciseData: IExercise[] = []
-    const apiUrl = process.env.NEXT_PUBLIC_API_URL
-    if (!apiUrl) {
-        throw new Error("Missing NEXT_PUBLIC_API_URL");
-    }
-
     try {
-        const res = await fetch(`${apiUrl}`)
+        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`)
         if (!res.ok) {
             throw new Error("Found error while fetching data")
         }
