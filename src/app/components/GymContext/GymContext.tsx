@@ -1,6 +1,7 @@
 "use client"
 import { IExercise } from "@/app/types/types";
 import { createContext, Dispatch, ReactNode, SetStateAction, useState } from "react";
+import useLocalStorageState from "use-local-storage-state";
 
 interface IContextValues {
     plan: IExercise[],
@@ -14,8 +15,13 @@ interface IGymProviderProps {
     children: ReactNode
 }
 const GymProvider = ({ children }: IGymProviderProps) => {
-    const [plan, setPlan] = useState<IExercise[]>([])
-    const [saved, setSaved] = useState<IExercise[]>([])
+    const [plan, setPlan] = useLocalStorageState<IExercise[]>("gym-plan", {
+        defaultValue: [],
+    });
+
+    const [saved, setSaved] = useLocalStorageState<IExercise[]>("gym-saved", {
+        defaultValue: [],
+    });
 
     const contextValues = {
         plan,
