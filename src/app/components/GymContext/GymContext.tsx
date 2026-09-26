@@ -1,7 +1,6 @@
 "use client"
 import { IExercise } from "@/app/types/types";
-import { createContext, Dispatch, ReactNode, SetStateAction } from "react";
-import useLocalStorageState from "use-local-storage-state";
+import { createContext, Dispatch, ReactNode, SetStateAction, useEffect, useState } from "react";
 
 interface IContextValues {
     plan: IExercise[],
@@ -15,15 +14,27 @@ interface IGymProviderProps {
     children: ReactNode
 }
 const GymProvider = ({ children }: IGymProviderProps) => {
-    const [plan, setPlan] = useLocalStorageState<IExercise[]>("gym-plan", {
-        defaultValue: [],
-    });
+    const [plan, setPlan] = useState<IExercise[]>([])
+    const [saved, setSaved] = useState<IExercise[]>([])
+    const [loaded, setLoaded] = useState(false);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setPlan(JSON.parse(localStorage.getItem("gym-plan") || "[]"));
+            setSaved(JSON.parse(localStorage.getItem("gym-saved") || "[]"));
+            setLoaded(true);
+        }, 0);
 
-    const [saved, setSaved] = useLocalStorageState<IExercise[]>("gym-saved", {
-        defaultValue: [],
-    });
+        return () => clearTimeout(timer);
+    }, []);
 
-    const contextValues: IContextValues = {
+    // Save data when it changes.
+    useEffect(() => {
+        if (!loaded) return;
+
+        localStorage.setItem("gym-plan", JSON.stringify(plan));
+        localStorage.setItem("gym-saved", JSON.stringify(saved));
+    }, [plan, saved, loaded]);
+    const contextValues = {
         plan,
         setPlan,
         saved,
