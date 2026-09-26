@@ -22,7 +22,7 @@ const page = async ({ params }: IExerciseProps) => {
     }
 
     return (
-        <section className=" mt-5 max-w-300 mx-auto lg:p-0">
+        <section className=" mt-5 max-w-300 mx-auto lg:p-0 min-h-screen">
             <div className="grid  lg:grid-cols-2 grid-cols-1 lg:gap-20 gap-5 p-5">
                 <div className="">
                     <Image src={exercise.image} alt={`${exercise.name}`} className="w-full object-cover lg:max-w-300  lg:min-h-screen rounded-xl" width={600} height={600}></Image>
