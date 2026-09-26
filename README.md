@@ -55,10 +55,9 @@ See exercise count, total minutes, and calories together on the planning dashboa
 
 ### Installation
 
-Replace `YOUR_REPOSITORY_URL` with the project's actual Git repository URL:
 
 ```bash
-git clone YOUR_REPOSITORY_URL ibonfit
+git clone https://github.com/officialbondondatta/iBonFit.git
 cd ibonfit
 npm install
 ```
