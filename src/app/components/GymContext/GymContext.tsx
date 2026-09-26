@@ -27,14 +27,13 @@ const GymProvider = ({ children }: IGymProviderProps) => {
         return () => clearTimeout(timer);
     }, []);
 
-    // Save data when it changes.
     useEffect(() => {
         if (!loaded) return;
 
         localStorage.setItem("gym-plan", JSON.stringify(plan));
         localStorage.setItem("gym-saved", JSON.stringify(saved));
     }, [plan, saved, loaded]);
-    const contextValues = {
+    const contextValues: IContextValues = {
         plan,
         setPlan,
         saved,
