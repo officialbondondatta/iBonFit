@@ -45,6 +45,43 @@ Access a dedicated **Saved** section within **My Plan** to keep favorite exercis
 ### 5. 📊 Workout Overview & Sorting
 See exercise count, total minutes, and calories together on the planning dashboard, with a sorting control that includes duration.
 
+## 💻 Run Locally
+
+### Prerequisites
+
+- Node.js compatible with the project's Next.js version.
+- npm and Git installed on your computer.
+- Access to the project's source repository.
+
+### Installation
+
+Replace `YOUR_REPOSITORY_URL` with the project's actual Git repository URL:
+
+```bash
+git clone YOUR_REPOSITORY_URL ibonfit
+cd ibonfit
+npm install
+```
+
+If the repository includes an `.env.example` file, copy it to `.env.local` and fill in the required values before starting the app.
+
+### Start the Development Server
+
+```bash
+npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000) in your browser, or use the address printed in the terminal.
+
+### Build and Run for Production
+
+```bash
+npm run build
+npm run start
+```
+
+> These commands assume the project uses npm and standard Next.js `dev`, `build`, and `start` scripts. Check `package.json` and the repository's lockfile for the actual commands and package manager. The source repository was not provided, so these setup steps have not been tested against the project.
+
 ## 🚀 Explore the Website
 
 1. Open [iBonFit](https://ibonfit.vercel.app/).
