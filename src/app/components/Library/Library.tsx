@@ -4,16 +4,21 @@ import Link from "next/link";
 import SectionHeader from "../shared/SectionHeader";
 
 const Library = async () => {
-    let exerciseData: IExercise[] = []
-    try {
-        const res = await fetch(`${process.env.NEXT_PUBLIC_API_URL}`)
-        if (!res.ok) {
-            throw new Error("Found error while fetching data")
-        }
-        exerciseData = await res.json()
-    } catch (error: unknown) {
-        throw new Error(`Data Fetching Error:  ${error}`)
+    const apiUrl = process.env.NEXT_PUBLIC_API_URL;
+
+    if (!apiUrl) {
+        throw new Error("Missing NEXT_PUBLIC_API_URL");
     }
+
+    const res = await fetch(apiUrl);
+
+    if (!res.ok) {
+        throw new Error(
+            `Library API failed: ${res.status} ${res.statusText}. URL: ${res.url}`
+        );
+    }
+
+    const exerciseData: IExercise[] = await res.json();
     const sectionDetails = {
         title: "THE LIBRARY",
         subTitle: "Twelve lifts covering every major muscle group."
