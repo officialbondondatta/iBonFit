@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+# 💪 iBonFit
 
-First, run the development server:
+### Train with intent. Plan your next workout.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A fitness website for exploring exercises, organizing daily workouts, and keeping your favorite lifts within reach.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+[View Live Website](https://ibonfit.vercel.app/) · [Workout Library](https://ibonfit.vercel.app/#library) · [My Plan](https://ibonfit.vercel.app/my-plan)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+</div>
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 📖 About the Project
 
-To learn more about Next.js, take a look at the following resources:
+**iBonFit** is a workout library and planning website that brings exercise discovery and daily workout organization into one place. Users can browse twelve exercises covering major muscle groups, review workout information, and use the **My Plan** dashboard to organize their training.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🛠️ Technologies Used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+| Technology | Purpose |
+| --- | --- |
+| **Next.js** | Web application framework and page routing |
+| **React** | Component-based user interface, through Next.js |
+| **JavaScript** | Browser-side application functionality |
+| **HTML & CSS** | Page structure and visual styling |
+| **Vercel** | Website hosting and deployment |
 
-## Deploy on Vercel
+> Technology information is based on the deployed website and its public assets. Exact versions and additional libraries require the project source code.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## ✨ 5 Key Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 1. 🏋️ Workout Library
+Explore twelve exercises, including bench presses, pull-ups, squats, deadlifts, and bodyweight movements, covering major muscle groups.
+
+### 2. 📋 Exercise Information at a Glance
+View muscle groups, equipment, duration, calorie estimates, and ratings directly on exercise cards to help compare workouts.
+
+### 3. 📅 Daily Workout Planning
+Organize training through **Today's Plan**, with a stated limit of five lifts at a time to keep each session focused.
+
+### 4. 🔖 Saved Workouts
+Access a dedicated **Saved** section within **My Plan** to keep favorite exercises organized for future sessions.
+
+### 5. 📊 Workout Overview & Sorting
+See exercise count, total minutes, and calories together on the planning dashboard, with a sorting control that includes duration.
+
+## 🚀 Explore the Website
+
+1. Open [iBonFit](https://ibonfit.vercel.app/).
+2. Browse the workout library and compare exercise cards.
+3. Visit [My Plan](https://ibonfit.vercel.app/my-plan) to access today's plan, saved workouts, and session totals.
+
+---
+
+<div align="center">
+
+**Explore your next lift. Build a focused session.**
+
+</div>
